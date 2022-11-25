@@ -1,20 +1,25 @@
 #include "main.h"
-
 /**
- * _puts - prints a string
- * new line, to stdout.
- * @string: input string
- * Return: count of string.
+ * _puts - function prints a string
+ * @str: char pointer
+ * @k: counter through string
+ * Return: 0
  */
-int _puts(char *string)
+void _puts(char *str, int *k)
 {
-	int contador = 0;
-
-	while (*string)
+	if (!str)
 	{
-		_putchar(*string);
-		string++;
-		contador++;
+		_putchar('(', k);
+		_putchar('n', k);
+		_putchar('u', k);
+		_putchar('l', k);
+		_putchar('l', k);
+		_putchar(')', k);
+		return;
 	}
-	return (contador);
+	while (*str)
+	{
+		_putchar(*str, k);
+		str++;
+	}
 }
